@@ -1,0 +1,9 @@
+{
+  "name": "Itcoder",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "": "App/"
+    }
+  }
+}
