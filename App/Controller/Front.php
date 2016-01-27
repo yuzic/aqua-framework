@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-class Index extends \Aqua\Base\Controller
+class Front extends \Aqua\Base\Controller
 {
     public function index()
     {
@@ -9,9 +9,10 @@ class Index extends \Aqua\Base\Controller
 
         $connection = \Aqua\Db\Connection::query($comment->commentList())->asArray();
 
-       // print_r($connection);
+        // print_r($connection);
         $this->render('index', [
             'stable'    => 66,
         ]);
     }
+
 }

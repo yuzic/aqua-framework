@@ -32,6 +32,7 @@ spl_autoload_register(function ($class) {
     }
 });
 
+\Aqua\Aqua::init();
 $app = new \App\Controller\Index;
 $app->index();
 
