@@ -9,9 +9,15 @@ class Index extends \Aqua\Base\Controller
 
         $connection = \Aqua\Db\Connection::query($comment->commentList())->asArray();
 
-       // print_r($connection);
         $this->render('index', [
             'stable'    => 66,
+        ]);
+    }
+
+    public function create()
+    {
+        $this->render('create', [
+            'loose'    => 66888,
         ]);
     }
 }

@@ -27,6 +27,18 @@ class Request
         return isset ($_POST [$name]) ? $_POST [$name] : $default;
     }
 
+    public static function getDocumentRoot()
+    {
+        return $_SERVER['DOCUMENT_ROOT'];
+    }
+
+
+    public static function getRequestUri()
+    {
+        return $_SERVER['REQUEST_URI'];
+    }
+
+
     /**
      *
      * @return boolean

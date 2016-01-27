@@ -37,4 +37,13 @@ abstract class  Controller
         return  'App/View/Controller/' . $this->getPath() . '/' . $view . '.php';
     }
 
+
+    public function run($controller, $action)
+    {
+        $fileController  =  '\\App\Controller\\' . $controller;
+        $controller  = new $fileController;
+
+        $controller->$action();
+    }
+
 }

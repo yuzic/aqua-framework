@@ -1,6 +1,8 @@
 <?php
 namespace Aqua;
 
+use Aqua\Base\Request;
+
 class Aqua
 {
     /** @var  \Aqua\Aqua $app */
@@ -8,12 +10,17 @@ class Aqua
 
     public static function getRootPath()
     {
-        return $_SERVER['DOCUMENT_ROOT'];
+        return Request::getDocumentRoot();
     }
 
     public static function getView()
     {
         return new \Aqua\Base\View();
+    }
+
+    public static function getRoute()
+    {
+        return new \Aqua\Base\Route();
     }
 
     public static function init()
