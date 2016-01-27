@@ -5,8 +5,7 @@
  * Date: 14.10.15
  * Time: 12:40
  */
-namespace Base\App;
-
+namespace Aqua\Di;
 
 /**
  * Dependence of injection Container
