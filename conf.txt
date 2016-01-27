@@ -20,3 +20,13 @@ server {
         }
 
 }
+
+
+
+http://eax.me/postgresql-install/
+
+
+CREATE DATABASE guestbook;
+CREATE USER guestbook WITH password '12345678';
+
+GRANT ALL privileges ON DATABASE guestbook TO guestbook;
