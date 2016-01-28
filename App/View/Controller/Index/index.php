@@ -1,6 +1,2 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: itcoder
- */
-echo $stable;
+stable<?=$stable;?><br>
+od: <?=$id; ?> <br>

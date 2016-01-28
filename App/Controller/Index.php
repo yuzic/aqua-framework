@@ -3,7 +3,7 @@ namespace App\Controller;
 
 class Index extends \Aqua\Base\Controller
 {
-    public function index()
+    public function index($id)
     {
         try {
             $comment =  new \App\Model\Comment;
@@ -17,6 +17,7 @@ class Index extends \Aqua\Base\Controller
 
         $this->render('index', [
             'stable'    => 66,
+            'id'    => (int) $id
         ]);
     }
 
@@ -24,6 +25,7 @@ class Index extends \Aqua\Base\Controller
     {
         $this->render('create', [
             'loose'    => 66888,
+
         ]);
     }
 }

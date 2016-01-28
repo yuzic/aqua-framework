@@ -38,12 +38,14 @@ abstract class  Controller
     }
 
 
-    public function run($controller, $action)
+    public function run($controller, $action, $params  = [])
     {
         $fileController  =  '\\App\Controller\\' . $controller;
         $controller  = new $fileController;
 
-        $controller->$action();
+        //$controller->$action();
+
+        call_user_func_array(array($controller, $action), $params);
     }
 
 }
