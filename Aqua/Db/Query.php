@@ -10,7 +10,7 @@ class Query
     }
 
 
-    public  function bind($sql, array $params)
+    protected function bind($sql, array $params)
     {
         foreach ($params as $key => $value) {
             $pattern = '?' . $key;

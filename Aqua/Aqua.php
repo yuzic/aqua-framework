@@ -8,24 +8,26 @@ class Aqua
     /** @var  \Aqua\Aqua $app */
     static $app = null;
 
-    public static function getRootPath()
+    public function getRootPath()
     {
         return Request::getDocumentRoot();
     }
 
-    public static function getView()
+    public function getView()
     {
         return new \Aqua\Base\View();
     }
 
-    public static function getRouter()
+    public function getRouter()
     {
         return new \Aqua\Base\Router();
     }
 
-    public static function init()
+    public function init()
     {
         self::$app = new self;
     }
+
+
 
 }

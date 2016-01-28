@@ -27,9 +27,19 @@ class Request
         return isset ($_POST [$name]) ? $_POST [$name] : $default;
     }
 
+    public static function isPost()
+    {
+        return empty($_POST);
+    }
+
     public static function getDocumentRoot()
     {
         return $_SERVER['DOCUMENT_ROOT'];
+    }
+
+    public static function getUseAgent()
+    {
+       return  $_SERVER['HTTP_USER_AGENT'];
     }
 
 
@@ -38,16 +48,8 @@ class Request
         return $_SERVER['REQUEST_URI'];
     }
 
-
-    /**
-     *
-     * @return boolean
-     */
-    public static function isAjax ()
+    public static function getIp()
     {
-        return (
-            isset ($_SERVER ['HTTP_X_REQUESTED_WITH']) &&
-            $_SERVER ['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest'
-        );
+        return $_SERVER['REMOTE_ADDR'];
     }
 }

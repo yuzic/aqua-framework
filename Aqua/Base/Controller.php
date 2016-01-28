@@ -6,6 +6,8 @@ use Aqua\Aqua;
 abstract class  Controller
 {
     protected $_view = null;
+
+
     /**
      * Get path controller
      *
@@ -41,11 +43,16 @@ abstract class  Controller
     public function run($controller, $action, $params  = [])
     {
         $fileController  =  '\\App\Controller\\' . $controller;
+
+        if (!class_exists($fileController)) {
+            return false;
+        }
+
         $controller  = new $fileController;
 
-        //$controller->$action();
+        call_user_func_array([$controller, $action], $params);
 
-        call_user_func_array(array($controller, $action), $params);
+        return true;
     }
 
 }

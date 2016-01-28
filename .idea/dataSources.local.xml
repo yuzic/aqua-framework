@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - guestbook@localhost" uuid="b044c9cb-5784-4b57-8be9-d51eb4eff158">
+      <secret-storage>master_key</secret-storage>
+      <user-name>guestbook</user-name>
+      <schema-pattern>guestbook.pg_catalog guestbook.public</schema-pattern>
+      <default-schemas>guestbook.pg_catalog guestbook.public</default-schemas>
+    </data-source>
+  </component>
+</project>
