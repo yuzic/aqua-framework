@@ -1,8 +1,8 @@
-CREATE TABLE "guestbook" (
-  "id" serial NOT NULL,
+CREATE TABLE "comment" (
+  "id" serial,
   "name" character varying(100),
   "email" character varying(100),
-  "comment" text,
+  "message" text,
   "created_at" integer DEFAULT NULL,
-  CONSTRAINT guestbook_pkey PRIMARY KEY (id )
+  CONSTRAINT comment_pkey PRIMARY KEY (id )
 );

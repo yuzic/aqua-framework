@@ -1,5 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: itcoder
- */
+return [
+    [
+        'pattern' => 'comment/index/:id',
+        'action' => 'Index/index',
+    ],
+];

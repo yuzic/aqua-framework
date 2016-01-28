@@ -18,9 +18,9 @@ class Aqua
         return new \Aqua\Base\View();
     }
 
-    public static function getRoute()
+    public static function getRouter()
     {
-        return new \Aqua\Base\Route();
+        return new \Aqua\Base\Router();
     }
 
     public static function init()

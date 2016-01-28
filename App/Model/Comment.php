@@ -11,7 +11,7 @@ class Comment extends \Aqua\Db\Model
                     "email",
                     "message",
                     "created_at"
-                FROM "comment"';
+                FROM "comment3"';
 
         $query = (new \Aqua\Db\Query)->instances($sql, []);
 

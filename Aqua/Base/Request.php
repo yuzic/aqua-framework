@@ -33,7 +33,7 @@ class Request
     }
 
 
-    public static function getRequestUri()
+    public static function getUri()
     {
         return $_SERVER['REQUEST_URI'];
     }
